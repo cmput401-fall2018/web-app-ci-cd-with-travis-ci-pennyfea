@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 
 <html lang="en">
@@ -5,7 +6,7 @@
   <meta charset="utf-8">
 
   <title>Insert Title Here</title>
-  <link rel="stylesheet" href="{% static 'css/style.css' %">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
 
@@ -27,6 +28,8 @@
           $("#skills").text(data.data.attributes.skills);
           // Complete consuming the API data and updating the work and contact sections
           // HINT: look at the above lines, jquery documentation, see what is the object returned
+          $("#work").text(data.data.attributes.work);
+          $("#contact").text(data.data.attributes.contact);
 
 
 
